@@ -55,7 +55,7 @@ const App = () => {
   return (
     <div className="container">
       <header>
-        <div className="logo">/slopedrop</div>
+        <div className="logo">\slopedrop</div>
       </header>
 
       <main>
