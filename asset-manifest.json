@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SwaroopMeher/slopedrop/static/css/main.bfbe2d91.css",
-    "main.js": "/SwaroopMeher/slopedrop/static/js/main.636cc9b1.js",
-    "static/js/453.7ec2f2b2.chunk.js": "/SwaroopMeher/slopedrop/static/js/453.7ec2f2b2.chunk.js",
-    "index.html": "/SwaroopMeher/slopedrop/index.html",
-    "main.bfbe2d91.css.map": "/SwaroopMeher/slopedrop/static/css/main.bfbe2d91.css.map",
-    "main.636cc9b1.js.map": "/SwaroopMeher/slopedrop/static/js/main.636cc9b1.js.map",
-    "453.7ec2f2b2.chunk.js.map": "/SwaroopMeher/slopedrop/static/js/453.7ec2f2b2.chunk.js.map"
+    "main.css": "/static/css/main.bfbe2d91.css",
+    "main.js": "/static/js/main.1bfb8d44.js",
+    "static/js/453.7ec2f2b2.chunk.js": "/static/js/453.7ec2f2b2.chunk.js",
+    "index.html": "/index.html",
+    "main.bfbe2d91.css.map": "/static/css/main.bfbe2d91.css.map",
+    "main.1bfb8d44.js.map": "/static/js/main.1bfb8d44.js.map",
+    "453.7ec2f2b2.chunk.js.map": "/static/js/453.7ec2f2b2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bfbe2d91.css",
-    "static/js/main.636cc9b1.js"
+    "static/js/main.1bfb8d44.js"
   ]
 }
