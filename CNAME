@@ -1,1 +1,1 @@
-slopedrop.com
+echo "slopedrop.com" > public/CNAME
