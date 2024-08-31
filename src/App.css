@@ -6,23 +6,27 @@ body {
   background-color: #FBEE0F;
   font-family: 'Gilroy', sans-serif;
   color: black;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent scrollbars */
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 header {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
 }
 
 header .logo {
@@ -37,22 +41,44 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.typing-container {
+  width: 100%;
+  max-width: 90vw;
+  overflow: hidden;
 }
 
 .typing {
-  border-right: 2px solid black;
-  white-space: nowrap;
-  overflow: hidden;
   display: inline-block;
   font-size: 2.5rem;
+  font-weight: 800;
   margin: 0;
-  min-height: 3.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .coming-soon {
   position: absolute; 
-  bottom: 30%;
+  bottom: 25%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
@@ -63,6 +89,7 @@ main {
   border-radius: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .coming-soon:hover {
@@ -71,21 +98,9 @@ main {
   background-color: #333;
 }
 
-.copyright {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 300;
-  font-size: 0.8rem;
-  color: #333;
-  margin-top: 10px;
-}
-
 .social-icons {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -100,5 +115,68 @@ main {
 
 .social-icon:hover {
   color: #333;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #333;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  header .logo {
+    font-size: 2rem;
+    margin-top: 10%;
+  }
+
+  .typing {
+    font-size: 1.8rem;
+  }
+
+  .coming-soon {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    margin-bottom: 10%;
+  }
+
+  .social-icons {
+    bottom: 60px;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 1.5rem;
+    margin-top: 30%;
+  }
+
+  .typing {
+    font-size: 1.4rem;
+  }
+
+  .coming-soon {
+    font-size: 1rem;
+    padding: 6px 12px;
+    margin-bottom: 20%;
+  }
+
+  .social-icons {
+    bottom: 50px;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+  }
 }
 

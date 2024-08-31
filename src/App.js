@@ -21,33 +21,36 @@ const TypingEffect = () => {
       if (text.length < currentMessage.length) {
         const timeout = setTimeout(() => {
           setText(currentMessage.slice(0, text.length + 1));
-        }, 90);
+        }, 100);
         return () => clearTimeout(timeout);
       } else {
         setIsTyping(false);
-        const timeout = setTimeout(() => setIsTyping(false), 6500);
+        const timeout = setTimeout(() => setIsTyping(false), 2000);
         return () => clearTimeout(timeout);
       }
     } else {
       if (text.length > 0) {
         const timeout = setTimeout(() => {
           setText(text.slice(0, -1));
-        }, 75); // Kept at 75ms for erasing
+        }, 50);
         return () => clearTimeout(timeout);
       } else {
         const nextIndex = (messageIndex + 1) % messages.length;
         setMessageIndex(nextIndex);
         setIsTyping(true);
-        const timeout = setTimeout(() => setText(''), 1000);
+        const timeout = setTimeout(() => setText(''), 500);
         return () => clearTimeout(timeout);
       }
     }
   }, [text, messageIndex, isTyping]);
 
   return (
-    <h1 className="typing" style={{ animation: `blink-caret 0.75s step-end infinite` }}>
-      {text}
-    </h1>
+    <div className="typing-container">
+      <p className="typing">
+        {text}
+        <span className="cursor"></span>
+      </p>
+    </div>
   );
 };
 
